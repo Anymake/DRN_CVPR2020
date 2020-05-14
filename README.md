@@ -2,14 +2,14 @@
 # DRN and SKU110K-R
 #### Xingjia Pan, Yuqiang Ren, Kekai Sheng, Weiming Dong, Haolei Yuan, Xiaowei Guo, Chongyang Ma, Changsheng Xu
 
-Code and Dataset for CVPR2020 "Dynamic Reﬁnement Network for Oriented and Densely Packed Object Detection" [[Paper link]](https://arxiv.org/pdf/temp.pdf)
+### Code and Dataset for CVPR2020 "Dynamic Reﬁnement Network for Oriented and Densely Packed Object Detection" will come soon!
 
 <img src="images/drn.png" width="1000">
 
 Figure 1. Overall framework of our Dynamic Reﬁnement Network. The backbone network is followed by two modules, i.e., feature selection module (FSM) and dynamic reﬁnement heads (DRHs). FSM selects the most suitable features by adaptively adjusting receptive ﬁelds. The DRHs dynamically reﬁne the predictions in an object-aware manner.
 
 ## Method
-In this work, we adopt CenterNet [44], with an additional angle prediction head as our baseline and present dynamic reﬁnement network (DRN). Our DRN consists of two novel parts: feature selection module (FSM) and dynamic reﬁnement head (DRH). FSM empowers neurons with the ability to adjust receptive ﬁelds in accordance with the object shapes and orientations, thus passing accurate and denoised features to detectors. DRH enables our model to make ﬂexible inferences in an object-aware manner. Speciﬁcally, we propose two DRHs for classiﬁcation (DRHC) and regression (DRH-R) tasks. In addition, we carefully relabel oriented bounding boxes for SKU110K [9] and called them SKU110K-R; in this manner, oriented object detection is facilitated. To evaluate the proposed method, we conduct extensive experiments on the DOTA, HRSC2016, and SKU110K datasets.
+In this work, we adopt CenterNet, with an additional angle prediction head as our baseline and present dynamic reﬁnement network (DRN). Our DRN consists of two novel parts: feature selection module (FSM) and dynamic reﬁnement head (DRH). FSM empowers neurons with the ability to adjust receptive ﬁelds in accordance with the object shapes and orientations, thus passing accurate and denoised features to detectors. DRH enables our model to make ﬂexible inferences in an object-aware manner. Speciﬁcally, we propose two DRHs for classiﬁcation (DRHC) and regression (DRH-R) tasks. In addition, we carefully relabel oriented bounding boxes for SKU110K [9] and called them SKU110K-R; in this manner, oriented object detection is facilitated. To evaluate the proposed method, we conduct extensive experiments on the DOTA, HRSC2016, and SKU110K datasets.
 
 In summary, our contributions include:
 
