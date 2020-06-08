@@ -2,7 +2,9 @@
 # DRN and SKU110K-R
 #### Xingjia Pan, Yuqiang Ren, Kekai Sheng, Weiming Dong, Haolei Yuan, Xiaowei Guo, Chongyang Ma, Changsheng Xu
 
-### Code and Dataset for CVPR2020 "Dynamic Reﬁnement Network for Oriented and Densely Packed Object Detection" will come soon!
+### Code and Dataset for CVPR2020 "Dynamic Reﬁnement Network for Oriented and Densely Packed Object Detection" will come soon !
+
+ Dynamic Reﬁnement Network for Oriented and Densely Packed Object Detection[[Paper Link]](https://arxiv.org/abs/2005.09973)
 
 <img src="images/drn.png" width="1000">
 
