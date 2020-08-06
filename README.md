@@ -2,7 +2,7 @@
 # DRN and SKU110K-R
 #### Xingjia Pan, Yuqiang Ren, Kekai Sheng, Weiming Dong, Haolei Yuan, Xiaowei Guo, Chongyang Ma, Changsheng Xu
 
-### Code and Dataset for CVPR2020 "Dynamic Reﬁnement Network for Oriented and Densely Packed Object Detection" will come soon !
+### Work in process.
 
  Dynamic Reﬁnement Network for Oriented and Densely Packed Object Detection[[Paper Link]](https://arxiv.org/abs/2005.09973)
 
@@ -23,9 +23,33 @@ In summary, our contributions include:
 
 • Our method shows consistent and substantial gains across DOTA, HRSC2016, SKU110K, and SKU110KR on oriented and densely packed object detection.
 
-## Dataset
+## SKU110K-R
 <img src="images/sku110k_r.png" width="1000">
 
 Figure 2. Some sample images from SKU110K. The images in top row are annotated with horizontal bounding boxes while the images in bottom row are with oriented bounding boxes.
 
-On the basis of SKU110K, we propose an extensive variant, namely SKU110K-R, of which each instance is annotated by an oriented bounding box. In the original SKU110K, the orientation angle ranges mainly in [-15 ◦ , 15 ◦ ]. To enrich the orientation, we further do some rotation augmentation from 6 angles (-45 ◦ , -30 ◦ , -15 ◦ , 15 ◦ , 30 ◦ ,45 ◦ ). Fig. 1 shows the statistics of orientation distribution of instances in SKU110k and SKU110K-R. To be compatible with the setting of CenterNet, we use a tuple(cx,cy,w,h,θ) to depict a oriented bounding box. cx,cy are the coordinates of the center point. w,h are the width and height of the object and θ is the orientation angle. Note that we start with y-axis, positive in clockwise direction and negative in counterclockwise direction. All the angles ranges from -90 ◦ to 90 ◦ .
+To use SKU110K-R,
+0. Download the original SKU110K data set from [websit](https://github.com/eg4000/SKU110K_CVPR19) and extract images
+1. Generate SKU110-R using our rotate augment script
+```
+   python rotate_augment.py path/to/images
+```
+2. Download the annotations for SKU110K-R from [website](https://drive.google.com/file/d/1_5JsVc_A5vWm-d-JXMJdX0Lx5FIlgAXJ/view?usp=sharing)
+The annotation is in coco format.
+
+## Citation
+
+If you find this project useful for your research, please use the following BibTeX entry.
+```
+@article{pan2020dynamic,
+  title={Dynamic Refinement Network for Oriented and Densely Packed Object Detection},
+  author={Xingjia Pan and Yuqiang Ren and Kekai Sheng and Weiming Dong and Haolei Yuan and Xiaowei Guo and Chongyang Ma and Changsheng Xu},
+  booktitle={CVPR},
+  pages={1--8},
+  year={2020}
+}
+```
+## Contacts
+If you have any questions about our work, please do not hesitate to contact us by emails.  
+Xingjia Pan: xingjia.pan@nlpr.ia.ac.cn  
+Yuqiang Ren: condiren@tencent.com
