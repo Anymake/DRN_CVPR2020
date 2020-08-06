@@ -19,7 +19,7 @@ To use SKU110K-R,
 
 0. Download the original SKU110K data set from [websit](https://github.com/eg4000/SKU110K_CVPR19) and extract images
 
-1. Generate SKU110-R using our rotate augment script
+1. Generate SKU110K-R using our rotate augment script
 
 ```
    python rotate_augment.py path/to/images
