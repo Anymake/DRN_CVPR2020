@@ -17,7 +17,7 @@ Figure 2. Some sample images from SKU110K. The images in top row are annotated w
 
 To use SKU110K-R,
 
-0. Download the original SKU110K data set from [websit](https://github.com/eg4000/SKU110K_CVPR19) and extract images
+0. Download the original SKU110K data set from [website](https://github.com/eg4000/SKU110K_CVPR19) and extract images
 
 1. Generate SKU110K-R using our rotate augment script
 
