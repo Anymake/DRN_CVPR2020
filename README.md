@@ -42,12 +42,12 @@ we provide a variant of cocoapi for evaluation of rotated bounding boxes.
 
 1. Replace pycocotools with pycocotools_ro
 
-**From**
+**FROM**
 ```
    import pycocotools.coco as coco
    from pycocotools.cocoeval import COCOeval
 ```
-**To** 
+**TO** 
 ```
    import pycocotools_ro.coco as coco
    from pycocotools_ro.cocoeval import COCOeval
@@ -55,17 +55,26 @@ we provide a variant of cocoapi for evaluation of rotated bounding boxes.
 
 2. Update the evaluation code.
 
-**From**
+**FROM**
 ```
    coco_eval = COCOeval(self.coco, coco_dets, "bbox")
 ```
-**to** 
+**TO** 
 ```
    coco_eval = COCOeval(self.coco, coco_dets, "rbbox")
 ```
 ### angle_nms
 we provide **angle_nms** for nms of rotated bounding box in post process.
 
+```
+   from angle_nms.angle_soft_nms import angle_soft_nms
+   # Example
+   result_after_nms = angle_soft_nms(all_dets, Nt=0.5, method=1,threshold=0.05)
+   all_dets: detection results
+   Nt: iou threshold 
+   method: 1, linear soft nms; 2, gaussian soft nms; other, nms
+   threshold: the minimum confidence valu to retain the detection bbox
+```
 
 ## Citation
 
