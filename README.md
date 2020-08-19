@@ -29,6 +29,43 @@ To use SKU110K-R,
 
 The annotation is in coco format.
 
+## Evaluation tools
+### cocoapi_ro 
+we provide a variant of cocoapi for evaluation of rotated bounding boxes. 
+
+0. Install cocoapi_ro(similar with cocoapi)
+
+```
+   cd PythonAPi
+   make
+```
+
+1. Replace pycocotools with pycocotools_ro
+From
+```
+   import pycocotools.coco as coco
+   from pycocotools.cocoeval import COCOeval
+```
+to 
+```
+   import pycocotools_ro.coco as coco
+   from pycocotools_ro.cocoeval import COCOeval
+```
+
+2. Update the evaluation code.
+
+From
+```
+   coco_eval = COCOeval(self.coco, coco_dets, "bbox")
+```
+to 
+```
+   coco_eval = COCOeval(self.coco, coco_dets, "rbbox")
+```
+### angle_nms
+we provide **angle_nms** for nms of rotated bounding box in post process.
+
+
 ## Citation
 
 If you find this project useful for your research, please use the following BibTeX entry.
