@@ -41,12 +41,13 @@ we provide a variant of cocoapi for evaluation of rotated bounding boxes.
 ```
 
 1. Replace pycocotools with pycocotools_ro
-From
+
+**From**
 ```
    import pycocotools.coco as coco
    from pycocotools.cocoeval import COCOeval
 ```
-to 
+**To** 
 ```
    import pycocotools_ro.coco as coco
    from pycocotools_ro.cocoeval import COCOeval
@@ -54,11 +55,11 @@ to
 
 2. Update the evaluation code.
 
-From
+**From**
 ```
    coco_eval = COCOeval(self.coco, coco_dets, "bbox")
 ```
-to 
+**to** 
 ```
    coco_eval = COCOeval(self.coco, coco_dets, "rbbox")
 ```
