@@ -75,6 +75,26 @@ we provide **angle_nms** for nms of rotated bounding box in post process.
    # method: 1, linear soft nms; 2, gaussian soft nms; other, nms
    # threshold: the minimum confidence valu to retain the detection bbox
 ```
+## Rotation Conv Layer
+
+1. To use the rotation conv layer, you need to install dcn_v2 first, 
+
+```
+    # git clone -b pytorch_1.0.0 https://github.com/chengdazhi/Deformable-Convolution-V2-PyTorch.git
+    # mv Deformable-Convolution-V2-PyTorch DCNv2
+    cd DCNv2
+    ./make.sh
+```
+2. Then you need to modify the `import path` of dcnv2 in **rotation_conv_utils.py**.
+
+```
+from path\to\DCNv1.modules.modulated_deform_conv import ModulatedDeformConv
+from path\to\DCNv2.functions.modulated_deform_conv_func import ModulatedDeformConvFunction
+
+```
+
+3. We provide a simple example to use the rotation conv layer in **test_rcl.py**. 
+
 
 ## Citation
 
