@@ -62,6 +62,7 @@ we provide a variant of cocoapi for evaluation of rotated bounding boxes.
 **TO** 
 ```
    coco_eval = COCOeval(self.coco, coco_dets, "rbbox")
+   coco_eval.params.maxDets = [1, 10, 300]
 ```
 ### angle_nms
 we provide **angle_nms** for nms of rotated bounding box in post process.
